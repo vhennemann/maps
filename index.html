@@ -7,16 +7,27 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .navbar {
-            background-color: #0B557B; /* Background color for the navbar */
+        .navbar-top {
+            background-color: #0B557B; /* Background color for the top navbar */
         }
-        .navbar-brand {
+        .navbar-top .container {
+            justify-content: space-between; /* Align items for logo and title */
+        }
+        .navbar-top .navbar-brand {
             color: #ffffff; /* Navbar brand (logo or text) color */
             font-weight: bold;
             font-size: 1.5rem; /* Adjust font size as needed */
         }
-        .nav-link {
+        .navbar-top .nav-link {
             color: #ffffff; /* Navbar link color */
+            font-size: 1.1rem; /* Adjust font size as needed */
+        }
+        .navbar-bottom {
+            background-color: #ffffff; /* Background color for the bottom navbar */
+            border-top: 1px solid #dee2e6; /* Border to separate top and bottom navbars */
+        }
+        .navbar-bottom .nav-link {
+            color: #0B557B; /* Tab link color */
             font-size: 1.1rem; /* Adjust font size as needed */
         }
         .tab-content {
@@ -30,13 +41,12 @@
         .container-blue {
             background-color: #0B557B;
             color: #ffffff;
-            padding: 20px;
+            padding: 20px 0; /* Adjust padding as needed */
             margin-bottom: 20px;
         }
-        .nav-tabs {
-            background-color: #ffffff; /* Background color for tabs */
-            border-bottom: none; /* Remove default border */
-            padding-top: 10px; /* Adjust padding as needed */
+        .container-white {
+            background-color: #ffffff;
+            padding: 20px 0; /* Adjust padding as needed */
         }
         .nav-tabs .nav-item {
             margin-bottom: -1px; /* Adjust margin for tabs */
@@ -59,7 +69,8 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark">
+<!-- Top Navbar with Logo and Title in Blue Container -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-top">
     <div class="container">
         <!-- Navbar brand with logo -->
         <a class="navbar-brand" href="#">
@@ -69,7 +80,8 @@
     </div>
 </nav>
 
-<div class="container-blue">
+<!-- Bottom Navbar with Tabs in White Background -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-bottom">
     <div class="container">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -87,7 +99,7 @@
             </li>
         </ul>
     </div>
-</div>
+</nav>
 
 <div class="container mt-3">
     <!-- Tab panes -->
@@ -129,5 +141,4 @@ $(document).ready(function(){
 
 </body>
 </html>
-
 
