@@ -12,18 +12,26 @@
         }
         .navbar-brand {
             color: #ffffff; /* Navbar brand (logo or text) color */
+            font-weight: bold;
+            font-size: 1.5rem; /* Adjust font size as needed */
         }
         .nav-link {
             color: #ffffff; /* Navbar link color */
+            font-size: 1.1rem; /* Adjust font size as needed */
         }
         .tab-content {
-            height: calc(100vh - 150px); /* Adjust this value as needed */
             overflow: auto; /* Enable scrolling if content exceeds height */
         }
         .tab-content iframe {
             width: 100%;
-            height: 100%;
+            height: 100vh; /* Use viewport height to occupy entire screen */
             border: none;
+        }
+        .container-blue {
+            background-color: #0B557B;
+            color: #ffffff;
+            padding: 20px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -31,30 +39,36 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">PDF Maps</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" id="campus-map-tab" data-toggle="tab" href="#campus-map" role="tab" aria-controls="campus-map" aria-selected="true">Campus Map</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="monument-tour-map-tab" data-toggle="tab" href="#monument-tour-map" role="tab" aria-controls="monument-tour-map" aria-selected="false">Monument Tour Map</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="airport-map-tab" data-toggle="tab" href="#airport-map" role="tab" aria-controls="airport-map" aria-selected="false">Airport Map</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="metro-map-tab" data-toggle="tab" href="#metro-map" role="tab" aria-controls="metro-map" aria-selected="false">Metro Map</a>
-                </li>
-            </ul>
-        </div>
+        <!-- Navbar brand with logo -->
+        <a class="navbar-brand" href="#">
+            <img src="your-logo.png" alt="Logo" height="30" class="mr-2"> <!-- Adjust height as needed -->
+            CSA Bootcamp Maps
+        </a>
     </div>
 </nav>
 
-<div class="container mt-3">
+<div class="container-blue">
+    <div class="container">
+        <h2 class="mb-4">PDF Maps</h2>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="campus-map-tab" data-toggle="tab" href="#campus-map" role="tab" aria-controls="campus-map" aria-selected="true">Campus Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="monument-tour-map-tab" data-toggle="tab" href="#monument-tour-map" role="tab" aria-controls="monument-tour-map" aria-selected="false">Monument Tour Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="airport-map-tab" data-toggle="tab" href="#airport-map" role="tab" aria-controls="airport-map" aria-selected="false">Airport Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="metro-map-tab" data-toggle="tab" href="#metro-map" role="tab" aria-controls="metro-map" aria-selected="false">Metro Map</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
     <!-- Tab panes -->
     <div class="tab-content">
         <div class="tab-pane fade show active" id="campus-map" role="tabpanel" aria-labelledby="campus-map-tab">
@@ -94,3 +108,4 @@ $(document).ready(function(){
 
 </body>
 </html>
+
