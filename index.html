@@ -7,6 +7,18 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        .navbar {
+            background-color: #0B557B;
+        }
+        .navbar-brand {
+            margin-right: auto; /* Pushes the brand/logo to the left */
+            padding: 0 15px;
+        }
+        .navbar-brand img {
+            max-height: 40px; /* Adjust as needed */
+            width: auto;
+            margin-right: 10px; /* Space between logo and text */
+        }
         .tab-content {
             height: calc(100vh - 150px); /* Adjust this value as needed */
             overflow: hidden;
@@ -24,8 +36,16 @@
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="seal.png" alt="CSA Seal">
+            CSA Bootcamp Maps
+        </a>
+    </div>
+</nav>
+
 <div class="container mt-5">
-    <h2>PDF Maps</h2>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
@@ -79,7 +99,6 @@ $(document).ready(function(){
 
 </body>
 </html>
-
 
 
 
