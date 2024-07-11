@@ -19,9 +19,12 @@
             width: auto;
             margin-right: 10px; /* Space between logo and text */
         }
+        .nav-tabs .nav-link {
+            color: #000; /* Black color for tab links */
+        }
         .nav-tabs .nav-link.active, .nav-tabs .nav-link:hover {
             background-color: #0B557B;
-            color: #fff;
+            color: #fff; /* White color for active/hover tab links */
         }
         .tab-content {
             background-color: #fff; /* Optional: sets a white background behind the tab content */
@@ -39,6 +42,15 @@
         }
         .btn-open-pdf {
             margin-top: 10px;
+            background-color: #0B557B; /* Background color same as navbar */
+            color: #fff; /* Text color for button */
+            border-color: #0B557B; /* Border color same as background */
+        }
+        @media (max-width: 768px) {
+            .tab-content img {
+                max-width: 100%;
+                height: auto;
+            }
         }
     </style>
 </head>
@@ -74,7 +86,7 @@
     <div class="tab-content mt-3">
         <div class="tab-pane fade show active" id="campus-map" role="tabpanel" aria-labelledby="campus-map-tab">
             <h3>Campus Map <a href="campusMap.jpg" class="btn btn-primary btn-open-pdf" target="_blank">Open Campus Map</a></h3>
-            <embed src="campusMap.jpg" type="image/jpeg" width="100%" height="600px" />
+            <img src="campusMap.jpg" alt="Campus Map" class="img-fluid" />
         </div>
         <div class="tab-pane fade" id="monument-tour-map" role="tabpanel" aria-labelledby="monument-tour-map-tab">
             <h3>Monument Tour Map <a href="tourMap.pdf" class="btn btn-primary btn-open-pdf" target="_blank">Open Monument Tour Map</a></h3>
@@ -82,7 +94,7 @@
         </div>
         <div class="tab-pane fade" id="airport-map" role="tabpanel" aria-labelledby="airport-map-tab">
             <h3>Airport Map <a href="Airport.jpg" class="btn btn-primary btn-open-pdf" target="_blank">Open Airport Map</a></h3>
-            <embed src="Airport.jpg" type="image/jpeg" width="100%" height="600px" />
+            <img src="Airport.jpg" alt="Airport Map" class="img-fluid" />
         </div>
         <div class="tab-pane fade" id="metro-map" role="tabpanel" aria-labelledby="metro-map-tab">
             <h3>Metro Map <a href="metro.pdf" class="btn btn-primary btn-open-pdf" target="_blank">Open Metro Map</a></h3>
