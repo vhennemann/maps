@@ -9,7 +9,6 @@
     <style>
         .navbar-top {
             background-color: #0B557B; /* Background color for the top navbar */
-            justify-content: flex-start; /* Align items to the left */
         }
         .navbar-top .container {
             display: flex;
@@ -79,6 +78,12 @@
         @media (max-width: 768px) {
             .tab-content iframe {
                 height: 80vh; /* Adjust iframe height for smaller screens */
+            }
+            .navbar-top .container {
+                flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            }
+            .navbar-top .navbar-brand {
+                margin-left: auto; /* Align brand to right on smaller screens */
             }
         }
     </style>
