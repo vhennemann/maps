@@ -9,8 +9,10 @@
     <style>
         .navbar-top {
             background-color: #0B557B; /* Background color for the top navbar */
+            justify-content: flex-start; /* Align items to the left */
         }
         .navbar-top .container {
+            display: flex;
             justify-content: space-between; /* Align items for logo and title */
         }
         .navbar-top .navbar-brand {
@@ -76,13 +78,13 @@
 </head>
 <body>
 
-<!-- Top Navbar with Logo and Title on the Right -->
+<!-- Top Navbar with Logo and Title on the Left -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-top">
     <div class="container">
-        <!-- Navbar brand with logo on the right -->
-        <a class="navbar-brand ml-auto" href="#">
-            CSA Bootcamp Maps
+        <!-- Navbar brand with logo on the left -->
+        <a class="navbar-brand" href="#">
             <img src="seal.png" alt="Logo" height="30"> <!-- Adjust logo height as needed -->
+            CSA Bootcamp Maps
         </a>
     </div>
 </nav>
