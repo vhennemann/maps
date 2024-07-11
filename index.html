@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSA Bootcamp Maps</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
         .navbar-top {
             background-color: #0B557B; /* Background color for the top navbar */
         }
@@ -38,11 +43,19 @@
             font-size: 1.1rem; /* Adjust font size as needed */
         }
         .tab-content {
+            height: calc(100vh - 56px); /* Adjust height based on navbar height */
             overflow: auto; /* Enable scrolling if content exceeds height */
         }
-        .tab-content iframe {
+        .tab-content .pdf-container {
             width: 100%;
-            height: 100%; /* Full viewport height */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .tab-content iframe {
+            max-width: 100%;
+            max-height: 100%;
             border: none;
         }
         .container-blue {
@@ -76,18 +89,8 @@
 
         /* Media Query for Small Screens */
         @media (max-width: 768px) {
-            .tab-content iframe {
-                height: 80vh; /* Adjust iframe height for smaller screens */
-            }
-            .navbar-top .container {
-                flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-            }
-            .navbar-top .navbar-brand {
-                text-align: center; /* Center text */
-            }
-            .navbar-top .navbar-brand img {
-                margin-right: 0; /* Remove margin for logo */
-                margin-bottom: 10px; /* Adjust spacing as needed */
+            .tab-content {
+                height: auto; /* Auto height on small screens */
             }
         }
     </style>
@@ -113,15 +116,7 @@
             <li class="nav-item">
                 <a class="nav-link active" id="campus-map-tab" data-toggle="tab" href="#campus-map" role="tab" aria-controls="campus-map" aria-selected="true">Campus Map</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="monument-tour-map-tab" data-toggle="tab" href="#monument-tour-map" role="tab" aria-controls="monument-tour-map" aria-selected="false">Monument Tour Map</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="airport-map-tab" data-toggle="tab" href="#airport-map" role="tab" aria-controls="airport-map" aria-selected="false">Airport Map</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="metro-map-tab" data-toggle="tab" href="#metro-map" role="tab" aria-controls="metro-map" aria-selected="false">Metro Map</a>
-            </li>
+            <!-- Add more tabs as needed -->
         </ul>
     </div>
 </nav>
@@ -131,22 +126,11 @@
     <div class="tab-content">
         <div class="tab-pane fade show active" id="campus-map" role="tabpanel" aria-labelledby="campus-map-tab">
             <h3>Campus Map</h3>
-            <img src="campusMap.jpg" alt="Campus Map" class="img-fluid">
+            <div class="pdf-container">
+                <iframe src="campusMap.pdf"></iframe>
+            </div>
         </div>
-        <div class="tab-pane fade" id="monument-tour-map" role="tabpanel" aria-labelledby="monument-tour-map-tab">
-            <h3>Monument Tour Map</h3>
-            <iframe src="tourMap.pdf"></iframe>
-        </div>
-        <div class="tab-pane fade" id="airport-map" role="tabpanel" aria-labelledby="airport-map-tab">
-            <h3>Airport Map</h3>
-            <!-- Replace with actual airport map content -->
-            <img src="Airport.jpg" alt="Airport Map" class="img-fluid">
-        </div>
-        <div class="tab-pane fade" id="metro-map" role="tabpanel" aria-labelledby="metro-map-tab">
-            <h3>Metro Map</h3>
-            <!-- Replace with actual metro map content -->
-            <iframe src="metro.pdf"></iframe>
-        </div>
+        <!-- Add more tab panes as needed -->
     </div>
 </div>
 
