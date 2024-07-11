@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>CSA Bootcamp Maps</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,12 @@
             color: #ffffff; /* Navbar brand (logo or text) color */
             font-weight: bold;
             font-size: 1.5rem; /* Adjust font size as needed */
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+        .navbar-top .navbar-brand img {
+            margin-right: 10px; /* Adjust spacing between logo and text */
+            height: 30px; /* Adjust logo height */
         }
         .navbar-top .nav-link {
             color: #ffffff; /* Navbar link color */
@@ -35,7 +41,7 @@
         }
         .tab-content iframe {
             width: 100%;
-            height: calc(100vh - 150px); /* Adjust this value as needed */
+            height: 100vh; /* Full viewport height */
             border: none;
         }
         .container-blue {
@@ -50,6 +56,7 @@
         }
         .nav-tabs .nav-item {
             margin-bottom: -1px; /* Adjust margin for tabs */
+            text-align: center; /* Center tabs */
         }
         .nav-tabs .nav-link {
             color: #0B557B; /* Tab link color */
@@ -69,22 +76,22 @@
 </head>
 <body>
 
-<!-- Top Navbar with Logo and Title in Blue Container -->
+<!-- Top Navbar with Logo and Title on the Right -->
 <nav class="navbar navbar-expand-lg navbar-dark navbar-top">
     <div class="container">
-        <!-- Navbar brand with logo -->
-        <a class="navbar-brand" href="#">
-            <img src="seal.png" alt="Logo" height="30" class="mr-2"> <!-- Adjust height as needed -->
+        <!-- Navbar brand with logo on the right -->
+        <a class="navbar-brand ml-auto" href="#">
             CSA Bootcamp Maps
+            <img src="seal.png" alt="Logo" height="30"> <!-- Adjust logo height as needed -->
         </a>
     </div>
 </nav>
 
-<!-- Bottom Navbar with Tabs in White Background -->
+<!-- Bottom Navbar with Tabs in Centered Layout -->
 <nav class="navbar navbar-expand-lg navbar-light navbar-bottom">
     <div class="container">
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs mx-auto" id="myTab" role="tablist">
             <li class="nav-item">
                 <a class="nav-link active" id="campus-map-tab" data-toggle="tab" href="#campus-map" role="tab" aria-controls="campus-map" aria-selected="true">Campus Map</a>
             </li>
@@ -142,6 +149,4 @@ $(document).ready(function(){
 </body>
 </html>
 
-</body>
-</html>
 
