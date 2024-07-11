@@ -53,7 +53,7 @@
             justify-content: center;
             align-items: center;
         }
-        .tab-content iframe {
+        .tab-content iframe, .tab-content img {
             max-width: 100%;
             max-height: 100%;
             border: none;
@@ -116,7 +116,15 @@
             <li class="nav-item">
                 <a class="nav-link active" id="campus-map-tab" data-toggle="tab" href="#campus-map" role="tab" aria-controls="campus-map" aria-selected="true">Campus Map</a>
             </li>
-            <!-- Add more tabs as needed -->
+            <li class="nav-item">
+                <a class="nav-link" id="monument-tour-map-tab" data-toggle="tab" href="#monument-tour-map" role="tab" aria-controls="monument-tour-map" aria-selected="false">Monument Tour Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="airport-map-tab" data-toggle="tab" href="#airport-map" role="tab" aria-controls="airport-map" aria-selected="false">Airport Map</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="metro-map-tab" data-toggle="tab" href="#metro-map" role="tab" aria-controls="metro-map" aria-selected="false">Metro Map</a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -130,7 +138,26 @@
                 <iframe src="campusMap.pdf"></iframe>
             </div>
         </div>
-        <!-- Add more tab panes as needed -->
+        <div class="tab-pane fade" id="monument-tour-map" role="tabpanel" aria-labelledby="monument-tour-map-tab">
+            <h3>Monument Tour Map</h3>
+            <div class="pdf-container">
+                <iframe src="tourMap.pdf"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="airport-map" role="tabpanel" aria-labelledby="airport-map-tab">
+            <h3>Airport Map</h3>
+            <!-- Replace with actual airport map content -->
+            <div class="pdf-container">
+                <img src="Airport.jpg" alt="Airport Map" class="img-fluid">
+            </div>
+        </div>
+        <div class="tab-pane fade" id="metro-map" role="tabpanel" aria-labelledby="metro-map-tab">
+            <h3>Metro Map</h3>
+            <!-- Replace with actual metro map content -->
+            <div class="pdf-container">
+                <iframe src="metro.pdf"></iframe>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -150,6 +177,7 @@ $(document).ready(function(){
 
 </body>
 </html>
+
 
 
 
