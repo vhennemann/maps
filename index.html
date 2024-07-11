@@ -43,7 +43,7 @@
         }
         .tab-content iframe {
             width: 100%;
-            height: 100vh; /* Full viewport height */
+            height: 100%; /* Full viewport height */
             border: none;
         }
         .container-blue {
@@ -73,6 +73,13 @@
             color: #ffffff; /* Active tab link color */
             background-color: #0B557B; /* Active tab background color */
             border-color: #ffffff; /* Active tab border color */
+        }
+
+        /* Media Query for Small Screens */
+        @media (max-width: 768px) {
+            .tab-content iframe {
+                height: 80vh; /* Adjust iframe height for smaller screens */
+            }
         }
     </style>
 </head>
@@ -150,5 +157,6 @@ $(document).ready(function(){
 
 </body>
 </html>
+
 
 
